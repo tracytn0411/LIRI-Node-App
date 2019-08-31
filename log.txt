@@ -1,0 +1,36 @@
+[2019-08-31T13:18:13.413] [INFO] default - -------->BandsInTown<---------
+Name of venue: Curacao North Sea Jazz Festival
+Venue location: Willemstad, Curaçao,
+Artist: maroon+5
+Event date: 08/31/2019
+
+[2019-08-31T13:19:24.958] [INFO] default - ============Spotify============
+Artist: Charlie Puth
+Song name: How Long
+Album: Voicenotes
+Preview link: https://p.scdn.co/mp3-preview/0dc00d9cdee8c916782feb2e6fc89d82910aa019?cid=7ee12b431cf34e22aa637142128ee6e3
+
+[2019-08-31T13:19:38.362] [INFO] default - ============Spotify============
+Artist: Ace of Base
+Song name: The Sign
+Album: The Sign (US Album) [Remastered]
+Preview link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=7ee12b431cf34e22aa637142128ee6e3
+
+[2019-08-31T13:20:04.921] [INFO] default - ============OMDB============
+Title: About Time
+Year: 2013
+IMDB Rating: 7.8/10
+Rotten Tomatoes Rating: 69%
+Country: UK
+Plot: At the age of 21, Tim discovers he can travel in time and change what happens and has happened in his own life. His decision to make his world a better place by getting a girlfriend turns out not to be as easy as you might think.
+Actors: Domhnall Gleeson, Rachel McAdams, Bill Nighy, Lydia Wilson
+
+[2019-08-31T13:20:18.609] [INFO] default - ============OMDB============
+Title: Mr. Nobody
+Year: 2009
+IMDB Rating: 7.8/10
+Rotten Tomatoes Rating: 67%
+Country: Belgium, Germany, Canada, France, USA, UK
+Plot: A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+Actors: Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
+

@@ -11,11 +11,11 @@ LIRI is like Iphone's SIRI. However, while SIRI is a Speech Interpretation and R
 <!-- [TOC] -->
 
 **:pushpin:Table of Contents**
-[Overview](#overview)
-[Set Up](#set-up)
-[Screenshots](#screenshots-of-the-project)
-[Technologies](#technologies)
-[Documentation](#documentation)
+- [Overview](#overview)
+- [Set Up](#set-up)
+- [Screenshots](#screenshots-of-the-project)
+- [Technologies](#technologies)
+- [Documentation](#documentation)
 
 -----
 
@@ -72,7 +72,7 @@ To run this project:
 
    - This will search the Bands in Town Artist Events API (`"https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"`) for an artist and render the following information about each event to the terminal:
 
-   - ```bash
+     ```bash
      - Name of the venue
      - Venue location
      - Date of the Event (MM/DD/YYYY)
@@ -82,7 +82,7 @@ To run this project:
 
    - This will show the following information about the song in your terminal/bash window
 
-   - ```bash
+     ```bash
      - Artist(s)
      - Name of the song
      - A preview link of the song from Spotify
@@ -99,7 +99,7 @@ To run this project:
 
    - This will output the following information to your terminal/bash window:
 
-   - ```bash
+     ```bash
      - Title of the movie.
      - Year the movie came out.
      - IMDB Rating of the movie.

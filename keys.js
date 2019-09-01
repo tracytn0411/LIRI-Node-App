@@ -1,4 +1,4 @@
-console.log('Loaded');
+//console.log('Loaded'); //to check if the file has loaded
 
 exports.spotify = {
   id: process.env.SPOTIFY_ID,

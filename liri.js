@@ -25,6 +25,34 @@ var value = nodeArgs[3]; //i.e. <maroon 5>, <forrest gump>
 var action = nodeArgs[2]; //i.e. "concert-this", "movie-this"
 
 
+//====================SWITCH CASE STATEMENT=======================//
+  //if-else would also work
+function switchAction () {
+switch (action) {
+  case "concert-this": 
+    concertThis();
+    break;
+
+  case "spotify-this-song":
+    spotifyThis();
+    break;
+  
+  case "movie-this":
+    movieThis();
+    break;
+  
+  case "do-what-it-says":
+    doThis();
+    break;
+  
+  default:
+    console.log(chalk.red("Please give me a command."));
+  }
+}
+
+switchAction();
+
+
 //=============BANDSINTOWN==============//
 function concertThis() {
   var artist = value;
@@ -44,14 +72,13 @@ function concertThis() {
     .then(function (response) {
       var data = response.data[0];
       var eventData = (
-        "-------->BandsInTown<---------"
-        + "\nName of venue: " + data.venue.name
-        + "\nVenue location: " + data.venue.city + "," + data.venue.region
-        + "\nArtist: " + artist
-        + "\nEvent date: " + moment(data.datatime).format("L")) + "\n"
+        "\n============BandsInTown============"
+        + "\nName of venue: " + chalk.red(data.venue.name)
+        + "\nVenue location: " + chalk.yellow(data.venue.city) + ", " + chalk.yellow(data.venue.region)
+        + "\nEvent date: " + chalk.blue(moment(data.datatime).format("L"))) + "\n"
       
       console.log(eventData);
-      logger.info(eventData); //write log events to log.txt
+      //logger.info(eventData); //write log events to log.txt
     })
     .catch(function (error) {
       if (error.response) {
@@ -84,14 +111,14 @@ function spotifyThis() {
       var data = response.tracks.items[0];
 
       var spotifyData = (
-        "============Spotify============"
-        + "\nArtist: " + data.artists[0].name
-        + "\nSong name: " + data.name
-        + "\nAlbum: " + data.album.name
-        + "\nPreview link: " + data.preview_url + "\n"
+        "\n============SPOTIFY============"
+        + "\nArtist: " + chalk.red(data.artists[0].name)
+        + "\nSong name: " + chalk.yellow(data.name)
+        + "\nAlbum: " + chalk.cyan(data.album.name)
+        + "\nPreview link: " + chalk.gray(data.preview_url) + "\n"
       );
       console.log(spotifyData);
-      logger.info(spotifyData); //log.txt
+      //logger.info(spotifyData); //log.txt
     })
 
     .catch(function(error) {
@@ -120,24 +147,24 @@ function movieThis() {
   }
 
   var omdbUrl = "https://www.omdbapi.com/?apikey=7328c6f&t=" + movieName + "&plot=short";
-  console.log(chalk.blue(omdbUrl));
+  //console.log(omdbUrl);
 
   axios.get(omdbUrl).then(
     function(response) {
       var omdb = response.data;
 
       var omdbData = (
-        "============OMDB============"
-        + "\nTitle: " + omdb.Title
-        + "\nYear: " + omdb.Year
-        + "\nIMDB Rating: " + omdb.Ratings[0].Value
-        + "\nRotten Tomatoes Rating: " + omdb.Ratings[1].Value
-        + "\nCountry: " + omdb.Country
-        + "\nPlot: " + omdb.Plot
-        + "\nActors: " + omdb.Actors + "\n"
+        "\n============OMDB============"
+        + "\nTitle: " + chalk.red(omdb.Title)
+        + "\nYear: " + chalk.yellow(omdb.Year)
+        + "\nIMDB Rating: " + chalk.white(omdb.Ratings[0].Value)
+        + "\nRotten Tomatoes Rating: " + chalk.white(omdb.Ratings[1].Value)
+        + "\nCountry: " + chalk.cyan(omdb.Country)
+        + "\nPlot: " + chalk.italic.gray(omdb.Plot)
+        + "\nActors: " + chalk.blue(omdb.Actors) + "\n"
       );
       console.log(omdbData);
-      logger.info(omdbData); //log.txt
+      //logger.info(omdbData); //log.txt
     }
   ).catch(
     function(error){
@@ -158,29 +185,7 @@ function doThis() {
     //set action and value to dataArray
     action = dataArr[0];
     value = dataArr[1];
+
+    switchAction();
   })
 }
-
-//====================SWITCH CASE STATEMENT=======================//
-  //if-else would also work
-switch (action) {
-  case "concert-this": 
-    concertThis();
-    break;
-
-  case "spotify-this-song":
-    spotifyThis();
-    break;
-  
-  case "movie-this":
-    movieThis();
-    break;
-  
-  case "do-what-it-says":
-    doThis();
-    break;
-  
-  default:
-    console.log(chalk.red("Please give me a command."));
-  }
-
